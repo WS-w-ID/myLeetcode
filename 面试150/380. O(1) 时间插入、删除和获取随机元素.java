@@ -1,6 +1,6 @@
 class RandomizedSet {
     /**移除 链表O(1); 随机返回 数组O(1)，但是移除可以通过数组的交换位置来变相实现O(1) 
-     链表或许也可以通过map里存储val的节点指针来实现*/
+     链表或许也可以通过map里存储val的节点指针来实现，可以通过将entrySet转为集合随机返回键值对*/
 
     List<Integer> arr = new ArrayList<>();
     Map<Integer, Integer> map = new HashMap<>();
