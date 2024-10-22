@@ -1,0 +1,19 @@
+class Solution {
+    public int candy(int[] ratings) {
+        int n=ratings.length, i;
+        int[] left = new int[n], right = new int[n];
+        left[0] = 1;
+        right[n-1] = 1;
+        for(i=1; i<n; ++i){
+            left[i] = ratings[i-1]<ratings[i] ? left[i-1]+1 : 1;
+        }
+        for(i=n-2; i>=0; --i){
+            right[i] = ratings[i]>ratings[i+1] ? right[i+1]+1 : 1;
+        }
+        int ans=0;
+        for(i=0; i<n; ++i){
+            ans += Math.max(left[i], right[i]);
+        }
+        return ans;
+    }
+}
