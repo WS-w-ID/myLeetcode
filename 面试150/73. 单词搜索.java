@@ -13,7 +13,7 @@ class Solution {
 
     public void dfs(char[][] board, int row, int col, String word, int index){
         int m=board.length, n=board[0].length;
-        if(row<0 || row >=m || col<0 || col>=n || index>=word.length()){    // 越界
+        if(row<0 || row >=m || col<0 || col>=n){    // 越界
             return ;
         }
         if(board[row][col] != word.charAt(index)){  // 不匹配或已访问
