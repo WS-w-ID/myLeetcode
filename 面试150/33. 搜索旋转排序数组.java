@@ -3,7 +3,7 @@ class Solution {
         /**小的一端最大的一个数都要比大的一端最小的一个数小 */
         int left=0, right=nums.length-1, n=nums.length;
         if(n <= 1)
-            return (nums[0]==target || n==0) ? 0 : -1;
+            return (nums[0]==target) ? 0 : -1;
         while(left <= right){
             int mid = left+(right-left)/2;
             if(nums[mid] == target)
